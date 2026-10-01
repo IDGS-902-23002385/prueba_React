@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import imagen from '../../assets/hero.png';
+import imagen from '../../assets/images/hero.png';
 
 function Banner() {
   return (
