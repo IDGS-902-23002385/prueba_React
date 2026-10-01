@@ -2,7 +2,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import AssignmentIcon from '@mui/icons-material/Assignment';
-import ContadorRegistros from './ContadorRegistros';
+import ContadorRegistros from '../ModuloRegistros/ContadorRegistros';
 
 function Header({ titulo, totalRegistros }) {
   return (

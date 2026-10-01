@@ -25,17 +25,17 @@ export default defineConfig({
         start_url: '/',
         icons: [
           {
-            src: '192.jpg',
+            src: 'img/192.jpg',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '512.jpg',
+            src: 'img/512.jpg',
             sizes: '512x512',
             type: 'image/png',
           },
           {
-            src: '512.jpg',
+            src: 'img/512.jpg',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable', // version que se adapta a iconos redondos/cuadrados en Android

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Container from '@mui/material/Container';
-import Header from './Header';
-import Footer from './Footer';
-import Banner from './Banner';
+import Header from '../ui/Header';
+import Footer from '../ui/Footer';
+import Banner from '../ui/Banner';
 import FormularioRegistro from './FormularioRegistro';
 import BuscadorRegistros from './BuscadorRegistros';
 import TablaRegistros from './TablaRegistros';
