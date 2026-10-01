@@ -7,41 +7,28 @@ import FormularioRegistro from './FormularioRegistro';
 import BuscadorRegistros from './BuscadorRegistros';
 import TablaRegistros from './TablaRegistros';
 import ContadorRegistros from './ContadorRegistros';
-
+import { RegistroService } from '../service/RegistroService';
 
 function ModuloRegistros() {
   const [registros, setRegistros] = useState([]);
   const [busqueda, setBusqueda] = useState('');
 
-  const registrosFiltrados = registros.filter((registro) =>
-    [registro.nombre, registro.email, registro.edad].some((campo) =>
-      String(campo).toLowerCase().includes(busqueda.trim().toLowerCase())
-    )
-  );
-
-  const agregarRegistro = (nuevoRegistro) => {
-    setRegistros((registrosPrevios) => [...registrosPrevios, nuevoRegistro]);
-  };
-
-  const eliminarRegistro = (idAEliminar) => {
-    setRegistros((registrosPrevios) =>
-      registrosPrevios.filter((registro) => registro.id !== idAEliminar)
-    );
-  };
+  const registroService = new RegistroService(registros, setRegistros);
+  const registrosFiltrados = registroService.filtrar(busqueda);
 
   return (
     <>
       <Header titulo="Modulo de invalidos" totalRegistros={registros.length} />
       <Container maxWidth="md">
         <Banner />
-        <FormularioRegistro onAgregar={agregarRegistro} />
+        <FormularioRegistro onAgregar={(nuevo) => registroService.agregar(nuevo)} />
         <BuscadorRegistros valor={busqueda} onChange={setBusqueda} />
         <TablaRegistros
           registros={registrosFiltrados}
-          onEliminar={eliminarRegistro}
+          onEliminar={(id) => registroService.eliminar(id)}
           hayBusqueda={Boolean(busqueda.trim())}
         />
-        <ContadorRegistros/>
+        <ContadorRegistros />
       </Container>
       <Footer />
     </>
