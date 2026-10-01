@@ -7,7 +7,7 @@ import FormularioRegistro from './FormularioRegistro';
 import BuscadorRegistros from './BuscadorRegistros';
 import TablaRegistros from './TablaRegistros';
 import ContadorRegistros from './ContadorRegistros';
-import { RegistroService } from '../service/RegistroService';
+import { RegistroService } from '../../service/RegistroService';
 
 function ModuloRegistros() {
   const [registros, setRegistros] = useState([]);
