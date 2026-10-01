@@ -1,4 +1,4 @@
-import ModuloRegistros from './components/features/ModuloRegistros/ModuloRegistros';
+import ModuloRegistros from './components/features/ModuloRegistros/components/ModuloRegistros';
 import './App.css'
 
 function App() {

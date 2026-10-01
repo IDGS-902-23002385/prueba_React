@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import Container from '@mui/material/Container';
-import Header from '../../layout/Header';
-import Footer from '../../layout/Footer';
-import Banner from '../../layout/Banner';
+import Header from '../../../layout/Header';
+import Footer from '../../../layout/Footer';
+import Banner from '../../../layout/Banner';
 import FormularioRegistro from './FormularioRegistro';
 import BuscadorRegistros from './BuscadorRegistros';
 import TablaRegistros from './TablaRegistros';
 import ContadorRegistros from './ContadorRegistros';
-import { RegistroService } from '../../service/RegistroService';
+import { RegistroService } from '../RegistroService';
 
 function ModuloRegistros() {
   const [registros, setRegistros] = useState([]);
